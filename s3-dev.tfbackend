@@ -1,0 +1,4 @@
+bucket         = "terraform-backend-buckets3"
+key            = "eks/terraform.tfstate"
+dynamodb_table = "terraform-backend-table"
+encrypt        = "true"

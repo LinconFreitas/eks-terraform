@@ -1,0 +1,5 @@
+bucket         = "terraform-backend-buckets3"
+key            = "eks/"
+dynamodb_table = ""
+region         = ""
+encrypt        = ""
