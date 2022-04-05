@@ -16,7 +16,7 @@ help: ## Show this simple help table.
 init: ## Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
 	terraform init -backend-config=s3-dev.tfbackend -no-color
 
-validate: ## Verify whether a configuration is syntactically valid and internally consistent.
+valid: ## Verify whether a configuration is syntactically valid and internally consistent.
 	terraform validate -no-color
 
 fmt: ## Checks that all Terraform configuration files complies with the canonical format.
@@ -27,6 +27,9 @@ plan: ## Generates an execution plan for Terraform to preview changes in the inf
 
 apply: ## Change infrastructure according to Terraform configuration files.
 	terraform apply -no-color plan.out
+
+pland: ## Generates an execution plan for Terraform to preview changes in the infrastructure (Plan Destroy).
+	terraform plan -destroy -var-file=vars-dev.tfvars -no-color
 
 destroy: ## Destroy the created infrastructure.
 	terraform destroy -auto-approve -var-file=vars-dev.tfvars -no-color
