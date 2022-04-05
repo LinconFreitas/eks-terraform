@@ -2,6 +2,9 @@ name: EKS via Terraform
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feature*
   pull_request:
     branches:
       - feature*
